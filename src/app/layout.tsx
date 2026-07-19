@@ -48,7 +48,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
@@ -58,12 +63,21 @@ export const metadata: Metadata = {
     title: "TLB Studios | Think. Learn. Build.",
     description:
       "Creative technology, media, automation, and business operations for local businesses, startups, and personal brands in Hyderabad, Telangana.",
+    images: [
+      {
+        url: "/images/brand/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TLB Studios — Think. Learn. Build.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "TLB Studios | Think. Learn. Build.",
     description:
       "Creative technology, media, automation, and business operations for local businesses, startups, and personal brands in Hyderabad, Telangana.",
+    images: ["/images/brand/og-image.png"],
   },
   robots: {
     index: true,

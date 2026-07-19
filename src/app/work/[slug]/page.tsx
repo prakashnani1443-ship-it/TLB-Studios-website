@@ -28,8 +28,20 @@ export async function generateMetadata({
       title: item.title,
       description: item.description,
       url: `/work/${item.id}`,
+      images: [
+        {
+          url: "/images/brand/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "TLB Studios — Think. Learn. Build.",
+        },
+      ],
     },
-    twitter: { title: item.title, description: item.description },
+    twitter: {
+      title: item.title,
+      description: item.description,
+      images: ["/images/brand/og-image.png"],
+    },
   };
 }
 
