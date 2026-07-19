@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "content creation agency Hyderabad",
   ],
   authors: [{ name: "TLB Studios" }],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
   },

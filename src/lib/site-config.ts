@@ -7,7 +7,7 @@ export const site = {
   eyebrow: "Creative Technology, Media & Business Operations",
   description:
     "TLB Studios is a Hyderabad-based creative technology, media, automation, and business operations studio helping businesses improve their digital presence, content, communication, and daily operations through practical systems.",
-  url: "https://www.tlbstudios.com", // placeholder — replace with the live domain
+  url: "https://tlb-studios-website.vercel.app",
   location: "Hyderabad, Telangana",
   tlbOsUrl: "https://tlb-os.vercel.app",
 };
