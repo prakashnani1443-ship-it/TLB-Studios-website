@@ -8,6 +8,7 @@ import {
   BrandIcon,
   CameraIcon,
   OperationsIcon,
+  GrowthIcon,
 } from "@/components/icons";
 
 const icons = {
@@ -17,11 +18,12 @@ const icons = {
   "branding-visual-design": BrandIcon,
   "photography-media": CameraIcon,
   "business-operations-automation": OperationsIcon,
+  "advertising-growth": GrowthIcon,
 } as const;
 
-// Bento rhythm: 2/1, 1/2, 2/1 columns per row on large screens — breaks the
-// repeating equal-card grid without hiding any service.
-const spans = ["lg:col-span-2", "lg:col-span-1", "lg:col-span-1", "lg:col-span-2", "lg:col-span-2", "lg:col-span-1"];
+// Bento rhythm: 2/1, 1/2, 2/1 columns per row on large screens, with the
+// newest service closing the grid as a full-width capstone row.
+const spans = ["lg:col-span-2", "lg:col-span-1", "lg:col-span-1", "lg:col-span-2", "lg:col-span-2", "lg:col-span-1", "lg:col-span-3"];
 
 export default function Services() {
   return (
@@ -31,7 +33,7 @@ export default function Services() {
           index="01"
           eyebrow="What We Do"
           title="Services built around real business needs"
-          description="Six practical service areas that cover how a growing business communicates, presents itself, and operates day to day."
+          description="Seven practical service areas that cover how a growing business communicates, presents itself, and operates day to day."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

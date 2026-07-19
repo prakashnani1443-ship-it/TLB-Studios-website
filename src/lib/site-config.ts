@@ -6,7 +6,7 @@ export const site = {
   tagline: "Think. Learn. Build.",
   eyebrow: "Creative Technology, Media & Business Operations",
   description:
-    "TLB Studios is a Hyderabad-based creative technology, media, automation, and business operations studio helping businesses improve their digital presence, content, communication, and daily operations through practical systems.",
+    "TLB Studios is a Hyderabad-based creative technology, media, advertising, automation, and business operations studio helping businesses improve their digital presence, content, communication, growth, and daily operations through practical systems.",
   url: "https://tlb-studios-website.vercel.app",
   location: "Hyderabad, Telangana",
   tlbOsUrl: "https://tlb-os.vercel.app",
@@ -125,6 +125,20 @@ export const services: Service[] = [
       "Daily operational systems",
     ],
   },
+  {
+    id: "advertising-growth",
+    title: "Advertising & Growth",
+    description:
+      "Performance-focused advertising campaigns designed to help businesses reach the right audience, generate leads, and support measurable growth.",
+    items: [
+      "Meta Ads",
+      "Google Ads",
+      "Lead Generation",
+      "Retargeting",
+      "Campaign Creative Design",
+      "Performance Reporting",
+    ],
+  },
 ];
 
 export type Solution = {
@@ -165,10 +179,10 @@ export const solutions: Solution[] = [
       "Vendor records, contact organization, supply schedules, order tracking, delivery planning, and recurring operational tasks.",
   },
   {
-    id: "marketing-communication-systems",
-    title: "Marketing & Communication Systems",
+    id: "marketing-advertising-systems",
+    title: "Marketing & Advertising Systems",
     description:
-      "Lead capture, WhatsApp communication, content planning, campaign workflows, and customer follow-up systems.",
+      "Campaign strategy, ad creatives, audience targeting, lead capture, WhatsApp communication, and performance tracking in one connected system.",
   },
 ];
 
@@ -409,6 +423,7 @@ export const serviceOptions: ServiceOption[] = [
   { value: "branding-visual-design", label: "Branding & Visual Design" },
   { value: "photography-media", label: "Photography & Media" },
   { value: "business-operations", label: "Business Operations & Automation" },
+  { value: "advertising-growth", label: "Advertising & Growth" },
   { value: "other", label: "Something else" },
 ];
 
