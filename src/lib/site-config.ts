@@ -43,6 +43,8 @@ export type Service = {
   title: string;
   description: string;
   items: string[];
+  /** Optional cover visual — used only where a real/concept asset exists. */
+  image?: GalleryImage;
 };
 
 export const services: Service[] = [
@@ -138,6 +140,11 @@ export const services: Service[] = [
       "Campaign Creative Design",
       "Performance Reporting",
     ],
+    image: {
+      id: "advertising-growth-cover",
+      label: "Advertising & Growth — concept visual",
+      src: "/images/generated-concepts/advertising-growth-cover.png",
+    },
   },
 ];
 
