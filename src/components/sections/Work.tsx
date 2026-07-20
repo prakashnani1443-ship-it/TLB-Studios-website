@@ -32,20 +32,21 @@ export default function Work() {
                   className="group grid grid-cols-1 items-center gap-8 rounded-2xl focus-visible:outline-none lg:grid-cols-2 lg:gap-14"
                 >
                   <div
-                    className={`relative overflow-hidden rounded-2xl border border-border bg-surface ${
+                    className={`relative overflow-hidden rounded-2xl ${
                       reversed ? "lg:order-2" : ""
                     }`}
                   >
                     <span
                       aria-hidden="true"
-                      className="font-syne absolute -top-6 left-4 select-none text-8xl font-extrabold text-foreground/[0.06] sm:text-9xl"
+                      className="font-syne absolute -top-6 left-4 z-10 select-none text-8xl font-extrabold text-foreground/[0.06] sm:text-9xl"
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {cover ? (
                       <ImagePlaceholder
                         image={cover}
-                        className="relative border-0 transition-transform duration-500 group-hover:scale-[1.02]"
+                        aspect="aspect-[3/2]"
+                        className="relative transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                     ) : null}
                   </div>

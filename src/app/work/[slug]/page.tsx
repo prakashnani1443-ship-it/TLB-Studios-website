@@ -127,7 +127,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
             Dashboard Preview
           </h2>
           <div className="mt-5">
-            <ImagePlaceholder image={images.mainScreen} aspect="aspect-[16/10]" />
+            <ImagePlaceholder image={images.mainScreen} aspect="aspect-[3/2]" />
           </div>
         </Reveal>
 
@@ -137,7 +137,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
             Mobile Preview
           </h2>
           <div className="mt-5 max-w-xs">
-            <ImagePlaceholder image={images.mobile} aspect="aspect-[9/16]" />
+            <ImagePlaceholder image={images.mobile} aspect="aspect-[3/4]" />
           </div>
         </Reveal>
 
@@ -147,7 +147,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
             System Workflow
           </h2>
           <div className="mt-5">
-            <ImagePlaceholder image={images.workflow} aspect="aspect-[16/9]" />
+            <ImagePlaceholder image={images.workflow} aspect="aspect-[3/2]" />
           </div>
         </Reveal>
 

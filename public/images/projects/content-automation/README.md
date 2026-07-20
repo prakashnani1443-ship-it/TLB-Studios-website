@@ -1,13 +1,12 @@
 # content-automation project images
 
-Referenced from the `content-creation-automation` entry in `src/lib/site-config.ts`.
+Referenced from the `content-creation-automation` entry in `src/lib/site-config.ts` via `projectImage("content-automation", <id>, <label>)`.
 
-| Slot | Expected file | Config field |
+| Slot | File | Config field |
 |---|---|---|
-| Cover (homepage card) | `cover.jpg` | `images.cover.src` |
-| Dashboard Preview — content calendar | `main.jpg` | `images.mainScreen.src` |
-| Mobile Preview — approval view | `mobile.jpg` | `images.mobile.src` |
-| System Workflow — title-to-caption flow | `workflow.jpg` | `images.workflow.src` |
+| Cover (homepage card) | `cover.png` | `images.cover` |
+| Dashboard Preview — content calendar | `main.png` | `images.mainScreen` |
+| Mobile Preview — approval view | `mobile.png` | `images.mobile` |
+| System Workflow — title-to-caption flow | `workflow.png` | `images.workflow` |
 
-Set the path in `site-config.ts` as `/images/projects/content-automation/<file>`
-once the real file is added here.
+Status: **live** — all 4 files in place.

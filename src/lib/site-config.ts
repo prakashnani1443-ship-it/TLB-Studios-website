@@ -190,8 +190,8 @@ export type GalleryImage = {
   id: string;
   label: string;
   // Central image config — leave src empty for a styled placeholder.
-  // Drop a real file at /public/images/projects/<imageFolder>/<id>.jpg and set
-  // src (e.g. "/images/projects/tlb-os/cover.jpg") to replace the placeholder.
+  // Set via projectImage() below to point at a real file under
+  // /public/images/projects/<imageFolder>/.
   src?: string;
 };
 
@@ -204,6 +204,16 @@ export type ProjectImages = {
   workflow: GalleryImage;
   gallery: GalleryImage[];
 };
+
+// Builds the public path for a real project image — e.g.
+// projectImage("tlb-os", "cover", "TLB-OS cover image") points at
+// /public/images/projects/tlb-os/cover.png. Drop the file in the right
+// folder (see that folder's README) and reference it here to replace the
+// placeholder; remove the call (keep just { id, label }) to fall back to
+// the placeholder box.
+function projectImage(folder: string, id: string, label: string): GalleryImage {
+  return { id, label, src: `/images/projects/${folder}/${id}.png` };
+}
 
 export type WorkItem = {
   id: string;
@@ -247,11 +257,11 @@ export const work: WorkItem[] = [
     ],
     imageFolder: "tlb-os",
     images: {
-      cover: { id: "cover", label: "TLB-OS cover image" },
-      mainScreen: { id: "main", label: "Dashboard overview" },
-      mobile: { id: "mobile", label: "Mobile dashboard view" },
-      workflow: { id: "workflow", label: "Client → project → task workflow" },
-      gallery: [{ id: "landing", label: "Login / landing screen" }],
+      cover: projectImage("tlb-os", "cover", "TLB-OS cover image"),
+      mainScreen: projectImage("tlb-os", "main", "Dashboard overview"),
+      mobile: projectImage("tlb-os", "mobile", "Mobile dashboard view"),
+      workflow: projectImage("tlb-os", "workflow", "Client → project → task workflow"),
+      gallery: [projectImage("tlb-os", "landing", "Login / landing screen")],
     },
     tools: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
   },
@@ -277,10 +287,10 @@ export const work: WorkItem[] = [
     ],
     imageFolder: "hostel-operations",
     images: {
-      cover: { id: "cover", label: "Hostel Operations System cover image" },
-      mainScreen: { id: "main", label: "Menu planning dashboard" },
-      mobile: { id: "mobile", label: "Resident food voting (mobile)" },
-      workflow: { id: "workflow", label: "Vendor & purchase schedule workflow" },
+      cover: projectImage("hostel-operations", "cover", "Hostel Operations System cover image"),
+      mainScreen: projectImage("hostel-operations", "main", "Menu planning dashboard"),
+      mobile: projectImage("hostel-operations", "mobile", "Resident food voting (mobile)"),
+      workflow: projectImage("hostel-operations", "workflow", "Vendor & purchase schedule workflow"),
       gallery: [],
     },
     tools: ["Web application framework", "Structured database", "Dashboard interface"],
@@ -306,10 +316,10 @@ export const work: WorkItem[] = [
     ],
     imageFolder: "content-automation",
     images: {
-      cover: { id: "cover", label: "Content Creation Automation cover image" },
-      mainScreen: { id: "main", label: "Content calendar view" },
-      mobile: { id: "mobile", label: "Mobile approval preview" },
-      workflow: { id: "workflow", label: "Title-to-caption automation flow" },
+      cover: projectImage("content-automation", "cover", "Content Creation Automation cover image"),
+      mainScreen: projectImage("content-automation", "main", "Content calendar view"),
+      mobile: projectImage("content-automation", "mobile", "Mobile approval preview"),
+      workflow: projectImage("content-automation", "workflow", "Title-to-caption automation flow"),
       gallery: [],
     },
     tools: ["Automation workflow tools", "AI-assisted content generation", "Calendar interface"],
@@ -334,13 +344,13 @@ export const work: WorkItem[] = [
     ],
     imageFolder: "alex-salon",
     images: {
-      cover: { id: "cover", label: "Alex Celebrity Hair Stylist cover image" },
-      mainScreen: { id: "main", label: "Website preview" },
-      mobile: { id: "mobile", label: "Mobile website preview" },
-      workflow: { id: "workflow", label: "Social content planning workflow" },
+      cover: projectImage("alex-salon", "cover", "Alex Celebrity Hair Stylist cover image"),
+      mainScreen: projectImage("alex-salon", "main", "Website preview"),
+      mobile: projectImage("alex-salon", "mobile", "Mobile website preview"),
+      workflow: projectImage("alex-salon", "workflow", "Social content planning workflow"),
       gallery: [
-        { id: "content", label: "Social content samples" },
-        { id: "before-after", label: "Styling transformation visuals" },
+        projectImage("alex-salon", "content", "Social content samples"),
+        projectImage("alex-salon", "before-after", "Styling transformation visuals"),
       ],
     },
     tools: ["Website platform", "Content production tools", "Social scheduling"],
@@ -365,10 +375,10 @@ export const work: WorkItem[] = [
     ],
     imageFolder: "dental-clinic",
     images: {
-      cover: { id: "cover", label: "Dental Clinic Digital System cover image" },
-      mainScreen: { id: "main", label: "Clinic website preview" },
-      mobile: { id: "mobile", label: "Mobile clinic website preview" },
-      workflow: { id: "workflow", label: "Patient inquiry & lead tracking workflow" },
+      cover: projectImage("dental-clinic", "cover", "Dental Clinic Digital System cover image"),
+      mainScreen: projectImage("dental-clinic", "main", "Clinic website preview"),
+      mobile: projectImage("dental-clinic", "mobile", "Mobile clinic website preview"),
+      workflow: projectImage("dental-clinic", "workflow", "Patient inquiry & lead tracking workflow"),
       gallery: [],
     },
     tools: ["Website platform", "Lead tracking system", "Communication tools"],

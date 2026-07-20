@@ -1,13 +1,12 @@
 # dental-clinic project images
 
-Referenced from the `dental-clinic-digital-system` entry in `src/lib/site-config.ts`.
+Referenced from the `dental-clinic-digital-system` entry in `src/lib/site-config.ts` via `projectImage("dental-clinic", <id>, <label>)`.
 
-| Slot | Expected file | Config field |
+| Slot | File | Config field |
 |---|---|---|
-| Cover (homepage card) | `cover.jpg` | `images.cover.src` |
-| Dashboard Preview — clinic website | `main.jpg` | `images.mainScreen.src` |
-| Mobile Preview — clinic website | `mobile.jpg` | `images.mobile.src` |
-| System Workflow — patient inquiry & lead tracking | `workflow.jpg` | `images.workflow.src` |
+| Cover (homepage card) | `cover.png` | `images.cover` |
+| Dashboard Preview — clinic website | `main.png` | `images.mainScreen` |
+| Mobile Preview — clinic website | `mobile.png` | `images.mobile` |
+| System Workflow — patient inquiry & lead tracking | `workflow.png` | `images.workflow` |
 
-Set the path in `site-config.ts` as `/images/projects/dental-clinic/<file>`
-once the real file is added here.
+Status: **live** — all 4 files in place.

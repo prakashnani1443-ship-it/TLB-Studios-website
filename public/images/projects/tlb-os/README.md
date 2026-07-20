@@ -1,14 +1,17 @@
 # tlb-os project images
 
-Referenced from the `tlb-os` entry in `src/lib/site-config.ts`.
+Referenced from the `tlb-os` entry in `src/lib/site-config.ts` via `projectImage("tlb-os", <id>, <label>)`.
 
-| Slot | Expected file | Config field |
+| Slot | File | Config field |
 |---|---|---|
-| Cover (homepage card) | `cover.jpg` | `images.cover.src` |
-| Dashboard Preview | `main.jpg` | `images.mainScreen.src` |
-| Mobile Preview | `mobile.jpg` | `images.mobile.src` |
-| System Workflow | `workflow.jpg` | `images.workflow.src` |
-| Gallery — Login / landing screen | `landing.jpg` | `images.gallery[0].src` |
+| Cover (homepage card) | `cover.png` | `images.cover` |
+| Dashboard Preview | `main.png` | `images.mainScreen` |
+| Mobile Preview | `mobile.png` | `images.mobile` |
+| System Workflow | `workflow.png` | `images.workflow` |
+| Gallery — Login / landing screen | `landing.png` | `images.gallery[0]` |
 
-Set the path in `site-config.ts` as `/images/projects/tlb-os/<file>` once the
-real file is added here.
+Status: **live** — all 5 files in place.
+
+To replace any file, drop a same-named `.png` in this folder (or update the
+`id`/extension passed to `projectImage()` in `site-config.ts` if you use a
+different filename).

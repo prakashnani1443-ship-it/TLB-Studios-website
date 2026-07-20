@@ -9,7 +9,10 @@ type ImagePlaceholderProps = {
 };
 
 // Renders a real image once `image.src` is set in the central config,
-// otherwise a clearly labeled placeholder box.
+// otherwise a clearly labeled placeholder box. Real images use object-contain
+// (not cover) because source assets come in mixed aspect ratios — this
+// guarantees nothing is ever stretched or cropped, at the cost of a little
+// letterboxing, which reads as an intentional mat against the card surface.
 export default function ImagePlaceholder({
   image,
   aspect = "aspect-[4/3]",
@@ -17,12 +20,15 @@ export default function ImagePlaceholder({
 }: ImagePlaceholderProps) {
   if (image.src) {
     return (
-      <div className={`relative overflow-hidden rounded-2xl border border-border ${aspect} ${className}`}>
+      <div
+        className={`relative overflow-hidden rounded-2xl border border-border bg-surface-2 shadow-lg shadow-black/30 ${aspect} ${className}`}
+      >
         <Image
           src={image.src}
           alt={image.label}
           fill
-          className="object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+          className="object-contain"
         />
       </div>
     );
